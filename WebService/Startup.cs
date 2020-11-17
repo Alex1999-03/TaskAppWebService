@@ -38,7 +38,7 @@ namespace WebService
             {
                 options.AddPolicy(name: myAllowSpecificationOrigins, builder =>
                 {
-                    builder.SetIsOriginAllowed(origin => true)
+                    builder.WithOrigins("http://localhost:4200")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
